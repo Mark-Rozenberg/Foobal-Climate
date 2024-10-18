@@ -1,0 +1,17 @@
+pandas
+openpyxl
+datetime
+numpy
+matplotlib
+seaborn
+requests
+statsmodels
+linearmodels
+scikit-learn
+mlxtend
+jupyter
+ipykernel
+noaa-sdk
+pycountry
+fuzzywuzzy
+unidecode
