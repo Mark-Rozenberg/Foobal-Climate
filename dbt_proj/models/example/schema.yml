@@ -1,0 +1,121 @@
+version: 2
+
+models:
+  - name: goalscorers
+    description: "Table containing goal scorers"
+    columns:
+      - name: index
+        description: "Index of the record"
+      - name: date
+        description: "Date of the match"
+      - name: home_team
+        description: "Home team"
+      - name: away_team
+        description: "Away team"
+      - name: team
+        description: "Team of the scorer"
+      - name: scorer
+        description: "Name of the scorer"
+      - name: minute
+        description: "Minute when the goal was scored"
+      - name: own_goal
+        description: "Indicates if the goal was an own goal"
+      - name: penalty
+        description: "Indicates if the goal was a penalty"
+
+  - name: results
+    description: "Table containing match results"
+    columns:
+      - name: index
+        description: "Index of the record"
+      - name: date
+        description: "Date of the match"
+      - name: home_team
+        description: "Home team"
+      - name: away_team
+        description: "Away team"
+      - name: home_score
+        description: "Score of the home team"
+      - name: away_score
+        description: "Score of the away team"
+      - name: tournament
+        description: "Name of the tournament"
+      - name: city
+        description: "City where the match was played"
+      - name: country
+        description: "Country where the match was played"
+      - name: neutral
+        description: "Indicates if the match was played on neutral ground"
+      - name: noaa_country_code
+        description: "NOAA country code"
+      - name: location_id
+        description: "Location ID"
+      - name: mindate
+        description: "Minimum date"
+      - name: maxdate
+        description: "Maximum date"
+      - name: date_ts
+        description: "Timestamp of the date"
+      - name: mindate_ts
+        description: "Timestamp of the minimum date"
+      - name: maxdate_ts
+        description: "Timestamp of the maximum date"
+      - name: valid
+        description: "Indicates if the record is valid"
+
+  - name: goal_scorers_summary
+    description: "A summary of goal scorers"
+    columns:
+      - name: tournament_id
+        description: "ID of the tournament"
+      - name: player_id
+        description: "ID of the player"
+      - name: goals
+        description: "Number of goals scored"
+
+  - name: goalscorers_summary
+    description: "Summary of goals scored by players, including various statistics."
+    columns:
+      - name: scorer
+        description: "Name of the player who scored the goal."
+      - name: team
+        description: "Team of the player who scored the goal."
+      - name: year
+        description: "Year in which the goal was scored."
+      - name: goals
+        description: "Total number of goals scored by the player in the year."
+      - name: avg_minute
+        description: "Average minute in which the player scored the goals."
+      - name: goals_first_half
+        description: "Number of goals scored by the player in the first half of the match."
+      - name: goals_second_half
+        description: "Number of goals scored by the player in the second half of the match."
+      - name: own_goals
+        description: "Number of own goals scored by the player."
+      - name: penalties
+        description: "Number of penalty goals scored by the player."
+  - name: team_stats
+    description: "Aggregated team statistics by year"
+    columns:
+      - name: year
+        description: "Year of the matches"
+      - name: team
+        description: "Team name"
+      - name: matches
+        description: "Number of matches played"
+      - name: goals
+        description: "Total goals scored"
+      - name: win
+        description: "Number of wins"
+      - name: draw
+        description: "Number of draws"
+      - name: loss
+        description: "Number of losses"
+      - name: win_prop
+        description: "Proportion of wins"
+      - name: goals_per_match
+        description: "Average goals per match"
+      - name: win_rank
+        description: "Rank based on win proportion"
+      - name: goals_rank
+        description: "Rank based on goals per match"

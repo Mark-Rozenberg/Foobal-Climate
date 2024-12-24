@@ -1,0 +1,11 @@
+dbt_proj:
+  target: dev
+  outputs:
+    dev:
+      type: sqlite
+      threads: 1
+      database: 'C:/Users/Mark Rozenberg/Foobal-Climate/Data/Main_DB.db'
+      schema: main
+      schema_directory: 'C:/Users/Mark Rozenberg/Foobal-Climate/Data/'
+      schemas_and_paths:
+        main: 'C:/Users/Mark Rozenberg/Foobal-Climate/Data/Main_DB.db'

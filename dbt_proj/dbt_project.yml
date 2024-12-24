@@ -1,0 +1,41 @@
+name: 'dbt_proj'
+version: '1.0'
+config-version: 2
+
+# Specify the profile to use
+profile: 'dbt_proj'
+
+# Define the paths to your models
+model-paths: ["models"]
+
+# Define the paths to your seeds
+seed-paths: ["seeds"]
+
+# Define the paths to your macros
+macro-paths: ["macros"]
+
+# Define the paths to your analyses
+analysis-paths: ["analyses"]
+
+# Define the paths to your tests
+test-paths: ["tests"]
+
+# Define the paths to your snapshots
+snapshot-paths: ["snapshots"]
+
+# Define the paths to your docs
+docs-paths: ["docs"]
+
+# Define the target directory for compiled SQL files
+target-path: "target"
+
+# Define the clean-targets directories
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Define the models configuration
+models:
+  dbt_proj:
+    example:
+      materialized: view

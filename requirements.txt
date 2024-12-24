@@ -15,3 +15,8 @@ noaa-sdk
 pycountry
 fuzzywuzzy
 unidecode
+dbt-core
+dbt-sqlite
+lxml
+dash
+plotly
